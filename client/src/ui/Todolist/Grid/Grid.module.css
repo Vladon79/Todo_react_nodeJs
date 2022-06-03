@@ -1,0 +1,8 @@
+.grid{
+	width: 100%;
+	margin-top:10px;
+}
+.paginationContainer{
+	display: flex-direction;
+	margin: 10px;
+}
