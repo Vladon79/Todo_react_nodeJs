@@ -1,0 +1,56 @@
+.loginPageContainer {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	border-radius: 10px;
+    border: #000 solid 1px;
+    background-color: #f9f9fe;
+	width: 50%;
+	height: 600px;
+}
+
+h2{
+    font-size: 33px
+}
+
+.p {
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.emailPasswordContainer {
+	margin: 30px;
+    display: flex;
+}
+
+.stringContainer {
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+}
+
+.passwordContainer {
+	display: flex;
+    margin: 50px;
+}
+
+.inputContainer {
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+}
+.inputEmail{
+
+}
+.inputPass{
+    margin-top: 10px;
+}
+
+.buttonContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}

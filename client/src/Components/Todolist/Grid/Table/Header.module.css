@@ -1,0 +1,36 @@
+header {
+	display: flex;
+	background-color: #21278f80;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    min-height: 50px;
+}
+
+.name {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	margin-right: 10px;
+	width: 25%;
+	cursor: pointer;
+}
+
+
+.data {
+	margin-right: 5px;
+	width: 25%;
+	cursor: pointer;
+}
+.check {
+	width: 20%;
+}
+.download {
+	margin-right: 10px;
+	width: 15%;
+}
+.delete {
+	margin-right: 10px;
+	width: 12%;
+}

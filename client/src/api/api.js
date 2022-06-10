@@ -18,8 +18,8 @@ export const tasksAPI = {
 			}
 		})
 	},
-	addTask(name, data) {
-		return instance.post("task", { name, data, isChecked: false, type: "task" })
+	addTask(name, data, userEmail, userId) {
+		return instance.post("task", { name, data, isChecked: false, type: "task", userEmail, userId })
 	},
 	addFile(file) {
 		return instance.post("task/file", file)
@@ -47,6 +47,5 @@ export const downlandFile = async (file) => {
 		link.click()
 		link.remove()
 	} else {
-		
 	}
 }

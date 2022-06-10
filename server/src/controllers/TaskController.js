@@ -3,26 +3,9 @@ import Task from '../models/Task.js'
 class TaskController {
   async create (req, res) {
     try {
-      const { name, isChecked, type, data } = req.body
-      const createTask = await Task.create({ name, isChecked, type, data })
+      const { name, isChecked, type, data, userEmail, userId } = req.body
+      const createTask = await Task.create({ name, isChecked, type, data, userEmail, userId })
       res.status(200).json(createTask)
-    } catch (e) {
-      res.status(500).json(e)
-    }
-  }
-
-  async createFile (req, res) {
-    try {
-      const file = req.files.file
-      console.log(file)
-      const type = file.name.split('.').pop()
-      const createFile = await Task.create({
-        name: file.name,
-        size: file.size,
-        isChecked: false,
-        type
-      })
-      res.status(200).json(createFile)
     } catch (e) {
       res.status(500).json(e)
     }
@@ -97,7 +80,6 @@ class TaskController {
       const task = await Task.findByIdAndDelete(id)
       return res.json(task)
     } catch (e) {
-      // logger.error(e)
       res.status(500).json(e)
     }
   }
@@ -114,22 +96,6 @@ class TaskController {
       return res.json(updateTask)
     } catch (e) {
       res.status(500).json(e)
-    }
-  }
-
-  async downloadFile (req, res) {
-    try {
-      console.log(req.query.id)
-      const file = await Task.findOne({ _id: req.query.id })
-      console.log(file)
-      // const path = `${__dirname}mongodb://localhost:27017/to_do`
-      // console.log(path)
-
-      res.pipe(`blob:mongodb://localhost:27017/to_do/task?_id=${req.query.id}`)
-      // res.status(200).json(createFile)
-    } catch (e) {
-      console.log(e)
-      res.status(500).json({ message: 'Downland error' })
     }
   }
 }
