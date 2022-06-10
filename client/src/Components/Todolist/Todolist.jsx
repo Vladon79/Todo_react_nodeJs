@@ -29,7 +29,6 @@ const Todolist = () => {
 		dispatch(setGridPageAC(1))
 	}
 
-
 	useEffect(() => {
 		dispatch(getTasks(pageCount, page, filter, sort, findByName))
 	}, [page, pageCount, filter, sort, findByName])
@@ -47,8 +46,7 @@ const Todolist = () => {
 				<h2>Todolist</h2>
 			</section>
 			<section className={s.inputButtonSection}>
-				{/* <Input value={inputValue} onChange={onChangeInputValue} /> */}
-				<Button type="primary" style={{ marginLeft: 8 }} onClick={showModal}>
+				<Button type="primary" onClick={showModal}>
 					Add new task
 				</Button>
 			</section>
