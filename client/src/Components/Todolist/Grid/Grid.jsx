@@ -7,8 +7,8 @@ import { Pagination } from "antd"
 import { setGridOptionsAC } from "./grid-reducer"
 
 const Grid = ({ todolist }) => {
-	let tasksCount = useSelector((state) => state.grid.tasksCount)
-	let page = useSelector((state) => state.grid.page)
+	const tasksCount = useSelector((state) => state.grid.tasksCount)
+	const page = useSelector((state) => state.grid.page)
 	const pageCount = useSelector((state) => state.grid.pageCount)
 	const dispatch = useDispatch()
 
@@ -22,7 +22,7 @@ const Grid = ({ todolist }) => {
 				<Table key={t._id} type={t.type} data={t.data} created={t.created} _id={t._id} name={t.name} isChecked={t.isChecked} />
 			))}
 			<section className={s.paginationContainer}>
-				<Pagination className={s.pagination}  showSizeChanger={true} hideOnSinglePage={false} current={page} onChange={onChangeCurrentPage} total={tasksCount} pageSize={pageCount} pageSizeOptions={[5, 10, 20, 50]} />
+				<Pagination className={s.pagination} showSizeChanger={true} hideOnSinglePage={false} current={page} onChange={onChangeCurrentPage} total={tasksCount} pageSize={pageCount} pageSizeOptions={[5, 10, 20, 50]} />
 			</section>
 		</div>
 	)

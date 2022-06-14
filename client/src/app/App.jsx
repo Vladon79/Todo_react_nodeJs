@@ -36,7 +36,6 @@ const App = () => {
 					)
 				]}
 			/>
-
 			{!isAuth && (
 				<Routes>
 					<Route path="*" element={<Navigate to="/login" />} />
