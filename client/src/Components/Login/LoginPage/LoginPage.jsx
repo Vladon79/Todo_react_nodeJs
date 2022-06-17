@@ -20,7 +20,7 @@ const LoginPage = () => {
 	const loginClickHandler = () => {
 		dispatch(login(emailInput.value, passwordInput.value))
 	}
-	const formIsValid = !!(emailInput.value && !emailInput.error && passwordInput.value &&!passwordInput.error)
+	const formIsValid = !(emailInput.value && !emailInput.error && passwordInput.value &&!passwordInput.error)
 	return (
 		<div className={s.loginPageContainer}>
 			<h2>Login</h2>
@@ -38,7 +38,7 @@ const LoginPage = () => {
 				<Button type="link" size="large" onClick={registrPageOnClick}>
 					Registration
 				</Button>
-				<Button disabled={!formIsValid} onClick={loginClickHandler} type="primary" style={{ marginTop: 50 }} size="large" block>
+				<Button disabled={formIsValid} onClick={loginClickHandler} type="primary" style={{ marginTop: 50 }} size="large" block>
 					Login
 				</Button>
 			</section>

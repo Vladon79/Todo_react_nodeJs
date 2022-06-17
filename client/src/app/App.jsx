@@ -7,7 +7,6 @@ import RegistrPage from "../Components/Login/RegistrPage/RegistrPage"
 import LoginPage from "../Components/Login/LoginPage/LoginPage"
 import { useDispatch, useSelector } from "react-redux"
 import { auth, logOut } from "../Components/Login/auth-reducer"
-import "antd/dist/antd.dark.less"
 import 'antd/dist/antd.css'
 
 const App = () => {
@@ -27,7 +26,7 @@ const App = () => {
 				className={s.pageHeader}
 				style={{ color: "#fff", backgroundColor: "#000" }}
 				ghost={false}
-				title="Senama_Soft Todolist"
+				title="Senama_Soft Todolist from nodeJS and MongoDB"
 				extra={[
 					isAuth && (
 						<Button type="primary" danger style={{ color: "#f9f9f9" }} onClick={logOutHendler}>
